@@ -48,12 +48,10 @@ public class DragonConsoleFrame extends JFrame {
         this.console = console;
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle(title);
-        this.setResizable(false);
-        
+        this.setResizable(false);        
         this.add(console);
         this.pack();
         console.setInputFocus();
-
         this.centerWindow();
     }
 
@@ -63,16 +61,7 @@ public class DragonConsoleFrame extends JFrame {
      * it to the JFrame.
      */
     public DragonConsoleFrame() {
-        this.console = new DragonConsole();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("DragonConsole " + console.getVersion());
-        this.setResizable(false);
-
-        this.add(console);
-        this.pack();
-        console.setInputFocus();
-
-        this.centerWindow();
+        DragonConsoleFrame("DragonConsole " + console.getVersion(),new DragonConsole());
     }
 
     /** Constructs a DragonConsole frame with the given Console and the default title.
@@ -82,16 +71,7 @@ public class DragonConsoleFrame extends JFrame {
      * @param console The DragonConsole to use for this DragonConsoleFrame.
      */
     public DragonConsoleFrame(DragonConsole console) {
-        this.console = console;
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("DragonConsole " + console.getVersion());
-        this.setResizable(false);
-        
-        this.add(console);
-        this.pack();
-        console.setInputFocus();
-
-        this.centerWindow();
+        DragonConsoleFrame("DragonConsole " + console.getVersion(),console);
     }
 
     /** Constructs a DragonConsoleFrame with the given title and a default DragonConsole.
@@ -100,16 +80,7 @@ public class DragonConsoleFrame extends JFrame {
      * @param title The Custom title for the DragonConsoleFrame.
      */
     public DragonConsoleFrame(String title) {
-        console = new DragonConsole();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle(title);
-        this.setResizable(false);
-
-        this.add(console);
-        this.pack();
-        console.setInputFocus();
-
-        this.centerWindow();
+        DragonConsoleFrame(title,new DragonConsole());
     }
 
     /** Centers the window based on screen size and window size.

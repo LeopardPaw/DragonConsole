@@ -383,11 +383,7 @@ public class DragonConsole extends JPanel implements KeyListener,
      * Default Constructor uses all the default values.
      */
     public DragonConsole() {
-        super();
-        this.useInlineInput = true;
-        this.printDefaultMessage = true;
-
-        this.initializeConsole();
+        DragonConsole(DEFAULT_WIDTH,DEFAULT_HEIGHT,true,true);
     }
 
     /**
@@ -396,11 +392,7 @@ public class DragonConsole extends JPanel implements KeyListener,
      *  <code>false</code> to use a text area for input.
      */
     public DragonConsole(boolean useInlineInput) {
-        super();
-        this.useInlineInput = useInlineInput;
-        this.printDefaultMessage = true;
-
-        this.initializeConsole();
+        DragonConsole(DEFAULT_WIDTH,DEFAULT_HEIGHT,useInlineInput,true);
     }
 
     /** 
@@ -412,11 +404,7 @@ public class DragonConsole extends JPanel implements KeyListener,
      *  DragonConsole logo or <code>false</code> to print nothing.
      */
     public DragonConsole(boolean useInlineInput, boolean printDefaultMessage) {
-        super();
-        this.useInlineInput = useInlineInput;
-        this.printDefaultMessage = printDefaultMessage;
-
-        this.initializeConsole();
+        DragonConsole(DEFAULT_WIDTH,DEFAULT_HEIGHT,useInlineInput,printDefaultMessage);
     }
 
     /** 
@@ -426,13 +414,7 @@ public class DragonConsole extends JPanel implements KeyListener,
      * @param height Height of the Console.
      */
     public DragonConsole(int width, int height) {
-        super();
-        this.cWidth = width;
-        this.cHeight = height;
-        this.useInlineInput = true;
-        this.printDefaultMessage = true;
-
-        this.initializeConsole();
+        DragonConsole(width,height,true,true);
     }
 
     /** 
@@ -444,13 +426,7 @@ public class DragonConsole extends JPanel implements KeyListener,
      *  <code>false</code> to use a text area for input.
      */
     public DragonConsole(int width, int height, boolean useInlineInput) {
-        super();
-        this.cWidth = width;
-        this.cHeight = height;
-        this.useInlineInput = useInlineInput;
-        this.printDefaultMessage = true;
-
-        this.initializeConsole();
+        DragonConsole(width,height,useInlineInput,true);
     }
 
     /** 
@@ -469,7 +445,6 @@ public class DragonConsole extends JPanel implements KeyListener,
         this.cWidth = width;
         this.useInlineInput = useInlineInput;
         this.printDefaultMessage = printDefaultMessage;
-
         this.initializeConsole();
     }
 
