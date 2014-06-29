@@ -1,0 +1,8 @@
+DragonConsoleFrame.java
+	cleaned up code in constructors
+DragonConsole.java
+	cleaned up code in constructors
++FileView.java
+	added file
+	controls file view
+	currently just shell
